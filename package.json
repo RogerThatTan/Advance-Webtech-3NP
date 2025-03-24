@@ -1,0 +1,22 @@
+{
+  "name": "advance-webtech-3np",
+  "version": "1.0.0",
+  "description": "learning advance webtech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RogerThatTan/Advance-Webtech-3NP.git"
+  },
+  "author": "RogerThatTan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RogerThatTan/Advance-Webtech-3NP/issues"
+  },
+  "homepage": "https://github.com/RogerThatTan/Advance-Webtech-3NP#readme",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
