@@ -3,12 +3,13 @@
     "airbnb",
     "airbnb/hooks",
     "eslint:recommended",
-    "prettier",
     "plugin:jsx-a11y/recommended",
+    "prettier",
   ],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 8,
+    "requireConfigFile": false,
   },
   "env": {
     "browser": true,
@@ -16,6 +17,7 @@
     "es6": true,
     "jest": true,
   },
+  "plugins": ["prettier", "react", "react-hooks"],
   "rules": {
     "react/react-in-jsx-scope": 0,
     "react-hooks/rules-of-hooks": "error",
@@ -43,5 +45,4 @@
       },
     ],
   },
-  "plugins": ["prettier", "react", "react-hooks"],
 }

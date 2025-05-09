@@ -1,26 +1,44 @@
 {
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "One Dark Pro Night Flat",
 
+  // Default Prettier formatter and enable format on save
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+
+  // JavaScript-specific overrides
   "[javascript]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": null
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": null
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "javascript.validate.enable": false, //disable all built-in syntax checking
-  "editor.codeActionsOnSave": [
-    "source.fixAll.eslint",
-    "source.fixAll.tslint",
-    "source.organizeImports"
-  ],
+
+  // Disable built-in JS validation to avoid conflict with ESLint
+  "javascript.validate.enable": false,
+
+  // ESLint and organize imports on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+
+  // ESLint extension status always visible
   "eslint.alwaysShowStatus": true,
-  // emmet
+  "eslint.validate": ["javascript", "javascriptreact"],
+
+  // Emmet config
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
-  }
+  },
+
+  // Prettier specific options
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.semi": true,
+  "prettier.tabWidth": 4,
+  "prettier.printWidth": 100,
+  "prettier.endOfLine": "auto"
 }
