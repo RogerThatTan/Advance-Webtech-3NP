@@ -2,22 +2,25 @@ import React from 'react';
 
 class Button extends React.Component {
   shouldComponentUpdate(nextProps) {
-    // console.log('Button component shouldComponentUpdate');
-    // Check if the props have changed
-    const { change: currentChange } = this.props;
-    const { change: nextChange } = nextProps;
-    if (currentChange === nextChange) {
-      return false; // Do not re-render the component
+    const { change: currentChange, locale: currentLocale } = this.props;
+    const { change: nextChange, locale: nextLocale } = nextProps;
+    if (currentChange === nextChange && nextLocale === currentLocale) {
+      return false;
     }
-    return true; // Re-render the component
+    return true;
   }
   render() {
-    console.log('Button component rendered');
-    const { change, locale } = this.props;
+    const { change, locale, show, enable } = this.props;
+    if (!enable) {
+      return null;
+    }
     return (
-      <button type="button " onClick={() => change(locale)}>
-        Click Here
-      </button>
+      <>
+        <button type="button " onClick={() => change(locale)}>
+          {locale === 'bn-BD' ? 'Click Here' : 'এখানে ক্লিক করুন'}
+        </button>
+        {show && <p>Hello</p>}
+      </>
     );
   }
 }

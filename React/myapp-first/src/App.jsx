@@ -13,14 +13,13 @@
 // export default App;
 
 //#8 React Event Handling & Control Re Rendering - React Tutorial Bangla Series
-import Clock from './components/Clock';
-
+import ClockList from './components/ClockList';
 function App() {
-  console.log('App component rendered');
+  const quantities = [1, 2, 3];
   return (
     <div>
       <h2>Live Clock Below:</h2>
-      <Clock />
+      <ClockList quantities={quantities} />
     </div>
   );
 }

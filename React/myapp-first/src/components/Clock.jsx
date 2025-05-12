@@ -90,20 +90,62 @@ class Clock extends React.Component {
     });
   };
 
+  //   render() {
+  //     const { date, locale } = this.state;
+  //     return (
+  //       <div>
+  //         <h1 className="heading">
+  //           <span className="text">{date.toLocaleTimeString(locale)}</span>
+  //           <img src="" />
+  //         </h1>
+  //         {/* <button type="button " onClick={this.handleClick.bind(this, 'en-US')}> */}
+  //         {/* <button type="button " onClick={() => this.handleClick('en-US')}> */}
+  //         <Button change={this.handleClick} locale="en-US">
+  //           Click Here
+  //         </Button>
+  //       </div>
+  //     );
+  //   }
+  // }
+
+  // export default Clock;
+
+  //#9 React Conditional Rendering, List and Keys
+
   render() {
-    console.log('Clock component rendered');
     const { date, locale } = this.state;
+    // let button;
+    // if (locale === 'bn-BD') {
+    //   button = (
+    //     <Button change={this.handleClick} locale="en-US">
+    //       Click Here
+    //     </Button>
+    //   );
+    // } else {
+    //   button = (
+    //     <Button change={this.handleClick} locale="bn-BD">
+    //       Click Here
+    //     </Button>
+    //   );
+    // }
     return (
       <div>
         <h1 className="heading">
           <span className="text">{date.toLocaleTimeString(locale)}</span>
           <img src="" />
         </h1>
-        {/* <button type="button " onClick={this.handleClick.bind(this, 'en-US')}> */}
-        {/* <button type="button " onClick={() => this.handleClick('en-US')}> */}
-        <Button change={this.handleClick} locale="en-US">
-          Click Here
-        </Button>
+        {/* {button} */}
+        {/* //terniary approach */}
+        {locale === 'bn-BD' ? (
+          <Button
+            change={this.handleClick}
+            locale="en-US"
+            show={false}
+            enable
+          />
+        ) : (
+          <Button change={this.handleClick} locale="bn-BD" show enable />
+        )}
       </div>
     );
   }
