@@ -13,15 +13,36 @@
 // export default App;
 
 //#8 React Event Handling & Control Re Rendering - React Tutorial Bangla Series
-import ClockList from './components/ClockList';
+// import ClockList from './components/ClockList';
+// function App() {
+//   const quantities = [1, 2, 3];
+//   return (
+//     <div>
+//       <h2>Live Clock Below:</h2>
+//       <ClockList quantities={quantities} />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//#10 React Form Handling - Controlled vs Uncontrolled Component- React Tutorial Bangla Series
+// import Form from './components/Form';
+// function App() {
+//   return (
+//     <div>
+//       <Form />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// #11 React Lifting State Up - React Tutorial Bangla Series
+
+import Calculator from './components/Calculator';
 function App() {
-  const quantities = [1, 2, 3];
-  return (
-    <div>
-      <h2>Live Clock Below:</h2>
-      <ClockList quantities={quantities} />
-    </div>
-  );
+  return <Calculator />;
 }
 
 export default App;
