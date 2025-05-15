@@ -49,29 +49,42 @@
 
 // #12 React Composition vs Inheritance
 // import Text from './components/inheritance/Text';
-import Emoji from './components/composition/Emoji';
-import Text from './components/composition/Text';
-import Bracket from './components/composition/Bracket';
+// import Emoji from './components/composition/Emoji';
+// import Text from './components/composition/Text';
+// import Bracket from './components/composition/Bracket';
+// function App() {
+//   return (
+//     <div
+//       style={{
+//         backgroundColor: '#282a2c',
+//         color: '#a274cb',
+//         minHeight: '100vh',
+//       }}
+//     >
+//       <Emoji>
+//         {({ addEmoji }) => (
+//           <Bracket>
+//             {({ addBracket }) => (
+//               <Text addEmoji={addEmoji} addBracket={addBracket} />
+//             )}
+//           </Bracket>
+//         )}
+//       </Emoji>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// #13 React Higher Order Components (HOC)
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
 function App() {
   return (
-    <div
-      style={{
-        backgroundColor: '#282a2c',
-        color: '#a274cb',
-        minHeight: '100vh',
-      }}
-    >
-      <Emoji>
-        {({ addEmoji }) => (
-          <Bracket>
-            {({ addBracket }) => (
-              <Text addEmoji={addEmoji} addBracket={addBracket} />
-            )}
-          </Bracket>
-        )}
-      </Emoji>
+    <div className="app">
+      <ClickCounter />
+      <HoverCounter />
     </div>
   );
 }
-
 export default App;
