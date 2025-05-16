@@ -27,3 +27,10 @@
 // 4. HOC is a pure function.
 // 5. HOC is a higher order function.
 // 6. HOC is a function that takes a component as an argument and returns a new component.
+
+// -------------------------------------------------------------------------
+
+//What is Render Prop?
+// Render prop is a prop that define the waht component will render.
+// Render prop is a function prop.
+// Render prop is a pattern that is used to share code between components.
