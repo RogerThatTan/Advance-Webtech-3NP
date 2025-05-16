@@ -77,25 +77,53 @@
 // export default App;
 
 // #13 React Higher Order Components (HOC)
+// import ClickCounter from './components/ClickCounter';
+// import HoverCounter from './components/HoverCounter';
+// import Counter from './components/Counter';
+
+// function App() {
+//   return (
+//     <div className="app">
+//       <Counter>
+//         {(counter, incrementCount) => (
+//           <ClickCounter count={counter} incrementCount={incrementCount} />
+//         )}
+//       </Counter>
+
+//       <Counter>
+//         {(counter, incrementCount) => (
+//           <HoverCounter count={counter} incrementCount={incrementCount} />
+//         )}
+//       </Counter>
+//     </div>
+//   );
+// }
+// export default App;
+
+// #16 React Context API - How to use React Context API
 import ClickCounter from './components/ClickCounter';
-import HoverCounter from './components/HoverCounter';
 import Counter from './components/Counter';
+import Section from './components/Content';
+import React from 'react';
+import ThemeContext from './contexts/themeContext';
+export default class App extends React.Component {
+  state = {
+    theme: 'dark',
+  };
 
-function App() {
-  return (
-    <div className="app">
-      <Counter>
-        {(counter, incrementCount) => (
-          <ClickCounter count={counter} incrementCount={incrementCount} />
-        )}
-      </Counter>
-
-      <Counter>
-        {(counter, incrementCount) => (
-          <HoverCounter count={counter} incrementCount={incrementCount} />
-        )}
-      </Counter>
-    </div>
-  );
+  render() {
+    const { theme } = this.state;
+    return (
+      <div className="app">
+        <Counter>
+          {(counter, incrementCount) => (
+            <ClickCounter count={counter} incrementCount={incrementCount} />
+          )}
+        </Counter>
+        <ThemeContext.Provider value={{ theme: theme }}>
+          <Section />
+        </ThemeContext.Provider>
+      </div>
+    );
+  }
 }
-export default App;

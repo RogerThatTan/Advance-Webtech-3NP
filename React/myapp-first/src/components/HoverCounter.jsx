@@ -13,15 +13,15 @@
 // export default withCounter(HoverCounter);
 
 // #14 React Render Props
-
 import React from 'react';
-export default class HoverCounter extends React.Component {
-  render() {
-    const { count, incrementCount } = this.props;
-    return (
-      <div>
-        <h1 onMouseOver={incrementCount}>Hovered {count} Times</h1>
-      </div>
-    );
-  }
+export default function HoverCounter({ count, incrementCount, theme }) {
+  const style =
+    theme === 'dark' ? { backgroundColor: '#000000', color: '#ffffff' } : null;
+  return (
+    <div>
+      <h1 onMouseOver={incrementCount} style={style}>
+        Hovered {count} Times
+      </h1>
+    </div>
+  );
 }

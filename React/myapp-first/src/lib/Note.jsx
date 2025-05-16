@@ -34,3 +34,8 @@
 // Render prop is a prop that define the waht component will render.
 // Render prop is a function prop.
 // Render prop is a pattern that is used to share code between components.
+
+// -------------------------------------------------------------------------
+
+//What is Context API?
+// Context API is a way to pass data through the component tree without having to pass props down manually at every level.
