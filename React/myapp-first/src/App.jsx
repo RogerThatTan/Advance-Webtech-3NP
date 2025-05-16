@@ -101,18 +101,25 @@
 // export default App;
 
 // #16 React Context API - How to use React Context API
+import React from 'react';
 import ClickCounter from './components/ClickCounter';
 import Counter from './components/Counter';
-import Section from './components/Content';
-import React from 'react';
+import Section from './components/Section';
 import ThemeContext from './contexts/themeContext';
 export default class App extends React.Component {
   state = {
     theme: 'dark',
+    switchTheme: () => {
+      this.setState(({ theme }) => {
+        if (theme === 'dark') {
+          return { theme: 'light' };
+        }
+        return { theme: 'dark' };
+      });
+    },
   };
 
   render() {
-    const { theme } = this.state;
     return (
       <div className="app">
         <Counter>
@@ -120,7 +127,7 @@ export default class App extends React.Component {
             <ClickCounter count={counter} incrementCount={incrementCount} />
           )}
         </Counter>
-        <ThemeContext.Provider value={{ theme: theme }}>
+        <ThemeContext.Provider value={this.state}>
           <Section />
         </ThemeContext.Provider>
       </div>
