@@ -6,14 +6,16 @@ const Add = () => {
   const [f_name, setf_name] = React.useState("");
   const [l_name, setl_name] = React.useState("");
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault(true);
     const data = { f_name, l_name };
     try {
       axios.post("http://localhost:3000/room/add", data);
       alert("Data Inserted");
-    } catch {
-      alert("Error");
+      setf_name("");
+      setl_name("");
+    } catch (error) {
+      console.error("Error inserting data:", error);
     }
   };
 
