@@ -315,24 +315,23 @@ myPromise
   .catch((error) => console.log(error));
 console.log("End");
 
-console.log("Start");
+console.log("Await Start");
 
-async function fetchData() {
-  try {
-    let result = await new Promise((resolve) =>
-      setTimeout(() => resolve("✅ Data fetched successfully!"), 2000)
-    );
-    console.log(result);
-  } catch (error) {
-    console.log("❌ Error:", error);
-  } finally {
-    console.log("Fetch completed!");
-  }
+async function a() {
+  await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let sum = 0;
+      for (let i = 0; i < 1000000000; i++) {
+        sum += i;
+      }
+      console.log(sum);
+      resolve();
+    }, 1000);
+  });
 }
+console.log("Await End"); // Now correctly placed inside the function
 
-fetchData();
-
-console.log("End");
+a(); // Call the function to execute it
 
 // // // // // Modules concepts
 // // // // // Exports & defaults
