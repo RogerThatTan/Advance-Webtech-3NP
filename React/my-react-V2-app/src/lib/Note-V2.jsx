@@ -45,3 +45,20 @@
 //Why React Hooks? What is the need of Hooks?
 // 1. Hooks are a new way to use state and other React features without writing a class.
 // 2. Hooks are a way to reuse stateful logic between components.
+
+//How to useState?
+// 1. useState is a Hook that lets you add React state to function components.
+// 2. useState is a function that returns an array with two elements.
+// 3. The first element is the current state value.
+// 4. The second element is a function that lets you update the state value.
+// 5. The function that lets you update the state value is called a setter function.
+// 6. The setter function takes the new state value as an argument.
+// 7. The setter function can also take a function as an argument.
+// 8. The function that takes the previous state value as an argument and returns the new state value.
+// 9. The setter function can also take a function as an argument.
+// 10. The function that takes the previous state value as an argument and returns the new state value.
+
+//Rules of Hooks
+// 1. Only call Hooks at the top level.
+// 2. Only call Hooks from React function components.
+// 3. Do not call Hooks from regular JavaScript functions.
