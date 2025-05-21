@@ -62,3 +62,28 @@
 // 1. Only call Hooks at the top level.
 // 2. Only call Hooks from React function components.
 // 3. Do not call Hooks from regular JavaScript functions.
+
+//React Responbility?
+// 1. React is responsible for rendering the UI.
+// 2. React is responsible for updating the UI.
+// 3. React is responsible for managing the state.
+// 4. React is responsible for handling the events.
+// 5. React is responsible for handling the lifecycle methods.
+// 6. Render JSX Code.
+
+//Beside these all the other things are side effects.
+//Example of side effects are:
+// 1. Fetching data.
+// 2. Updating the DOM.
+// 3. Setting up a subscription.
+
+//Side  Effects in Class Components
+// 1. componentDidMount
+// 2. componentDidUpdate
+// 3. componentWillUnmount
+//(Duplicate and Unorganizaed code are the main issue in class components)
+
+//Lets see what useEffect does?
+// 1. useEffect is a Hook that lets you perform side effects in function components.
+//2.solves all the problems of class components.
+//3.replaces the didMount, didUpdate, and willUnmount lifecycle methods.
