@@ -87,3 +87,7 @@
 // 1. useEffect is a Hook that lets you perform side effects in function components.
 //2.solves all the problems of class components.
 //3.replaces the didMount, didUpdate, and willUnmount lifecycle methods.
+
+//What is purpose of Memo?
+// 1. Memo is a function that lets you optimize the performance of your components.
+//React.memo is not a hook.
